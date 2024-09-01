@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('title', 'Activity Log')
-
 @section('content')
 <div class="page-breadcrumb">
     <div class="row">
@@ -91,13 +90,11 @@
 
         });
     }
-
     $('#search').on('keyup',function() {
         var query = $('#search').val();
         var page = $('#hidden_page').val();
         fetch_data(page, query);
     });
-
     $(document).on('click', '.pagination a', function(e) {
         e.preventDefault();
         var page = $(this).attr('href').split('page=')[1];
